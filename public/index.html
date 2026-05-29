@@ -3,143 +3,166 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Criz Leung — creative portfolio for visual storytelling, editing, AI image, AI video, and design works." />
-  <title>Criz Leung — Creative Portfolio</title>
+  <meta name="description" content="Criz Leung — hybrid creative systems portfolio for cinematic editing, AI image, AI video, and visual design." />
+  <title>Criz Leung — Hybrid Creative Systems</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" data-reveal>
     <a class="brand" href="#top" aria-label="Criz Leung home">Criz Leung</a>
     <nav class="nav" aria-label="Primary navigation">
+      <a href="#reel">Reel</a>
       <a href="#works">Works</a>
-      <a href="#services">Focus</a>
-      <a href="#about">About</a>
+      <a href="#method">Method</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">Creative Portfolio</p>
-        <h1>Visual storytelling, editing, and AI-driven creative design.</h1>
-        <p class="lede">
-          A personal portfolio for video editing, motion-led visuals, AI image creation,
-          AI video experiments, design systems, and narrative-driven content.
-        </p>
+    <section class="hero scene" aria-label="Cinematic portfolio hero">
+      <div class="hero-media" data-parallax="0.16" aria-hidden="true">
+        <div class="media-noise"></div>
+        <div class="media-frame frame-one"></div>
+        <div class="media-frame frame-two"></div>
+        <div class="media-frame frame-three"></div>
+      </div>
+      <div class="hero-content" data-reveal>
+        <p class="label">Hybrid Creative Systems</p>
+        <h1>Cinematic editing, AI image, AI video, and visual design systems.</h1>
+        <p class="lede">A media-first portfolio for visual storytelling, AI-driven creative production, and structured design experiments.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#works">View selected works</a>
-          <a class="button secondary" href="#contact">Contact</a>
+          <a class="button primary" href="#reel">Enter reel</a>
+          <a class="button ghost" href="#works">View systems</a>
         </div>
       </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
 
-      <div class="reel-card" aria-label="Showreel placeholder">
-        <div class="video-frame">
-          <div class="play-mark">▶</div>
-          <p>Showreel Embed Area</p>
-          <span>Replace this block with a YouTube or Vimeo embed.</span>
+    <section id="reel" class="scene reel-scene">
+      <div class="section-kicker" data-reveal>
+        <p class="label">Showreel Stage</p>
+        <h2>One reel will anchor the whole experience.</h2>
+      </div>
+      <div class="showreel-shell" data-reveal data-parallax="-0.08">
+        <div class="showreel-placeholder" role="img" aria-label="Showreel placeholder">
+          <span class="play-icon">▶</span>
+          <p>Showreel placeholder</p>
+          <small>Replace with a muted cinematic loop or YouTube / Vimeo embed.</small>
         </div>
       </div>
     </section>
 
-    <section id="works" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Selected Works</p>
-        <h2>Projects across editing, design, and AI visual production.</h2>
+    <section id="works" class="section works-section">
+      <div class="section-kicker wide" data-reveal>
+        <p class="label">Selected Works</p>
+        <h2>Four lanes of work, built as an editorial visual system.</h2>
       </div>
 
-      <div class="work-grid">
-        <article class="work-card">
-          <div class="thumb gradient-one"></div>
-          <div class="work-content">
-            <p class="tag">Video Editing</p>
-            <h3>Commercial / Social Edit</h3>
-            <p>Rhythm-first short-form edit built for campaign clarity, pacing, and audience retention.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="thumb gradient-two"></div>
-          <div class="work-content">
-            <p class="tag">AI Image</p>
-            <h3>Character & Visual Concept</h3>
-            <p>Source-anchored image generation direction for cinematic character and key visual design.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="thumb gradient-three"></div>
-          <div class="work-content">
-            <p class="tag">AI Video</p>
-            <h3>Motion Experiment</h3>
-            <p>AI-assisted video exploration with controlled framing, visual continuity, and cinematic language.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="thumb gradient-four"></div>
-          <div class="work-content">
-            <p class="tag">Design System</p>
-            <h3>Portfolio / Web Direction</h3>
-            <p>Clean visual hierarchy for presenting works, process, role, and contact information.</p>
-          </div>
-        </article>
+      <div class="filter-bar" aria-label="Project filters" data-reveal>
+        <button class="filter-button is-active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="video">Video</button>
+        <button class="filter-button" data-filter="image">AI Image</button>
+        <button class="filter-button" data-filter="ai-video">AI Video</button>
+        <button class="filter-button" data-filter="design">Design</button>
       </div>
-    </section>
 
-    <section id="services" class="section split-section">
-      <div>
-        <p class="eyebrow">Focus</p>
-        <h2>Creative work that combines editing logic with visual system thinking.</h2>
-      </div>
-      <div class="focus-list">
-        <div>
-          <h3>Editing & Rhythm</h3>
-          <p>Structure, pacing, hook design, music timing, and social-first storytelling.</p>
-        </div>
-        <div>
-          <h3>Visual Direction</h3>
-          <p>Frames, references, image systems, style control, and visual identity development.</p>
-        </div>
-        <div>
-          <h3>AI Creative Production</h3>
-          <p>Prompt architecture, image generation, AI video direction, and repeatable creative workflows.</p>
-        </div>
+      <div class="work-grid editorial-grid">
+        <article class="work-card feature" data-category="video" data-reveal>
+          <button class="card-button" data-project="reel" aria-label="Open Video Editing System project">
+            <span class="thumb thumb-video"></span>
+            <span class="card-meta">Video Editing</span>
+            <strong>Rhythm-led reel system</strong>
+            <span>Editing language, pacing, hooks, and narrative compression for short-form motion.</span>
+          </button>
+        </article>
+        <article class="work-card" data-category="image" data-reveal>
+          <button class="card-button" data-project="image" aria-label="Open AI Image Direction project">
+            <span class="thumb thumb-image"></span>
+            <span class="card-meta">AI Image</span>
+            <strong>Cinematic character frames</strong>
+            <span>Source-anchored image generation and visual direction for high-impact concepts.</span>
+          </button>
+        </article>
+        <article class="work-card" data-category="ai-video" data-reveal>
+          <button class="card-button" data-project="aivideo" aria-label="Open AI Video Experiments project">
+            <span class="thumb thumb-aivideo"></span>
+            <span class="card-meta">AI Video</span>
+            <strong>Motion experiments</strong>
+            <span>AI-assisted shots, continuity tests, camera language, and cinematic transitions.</span>
+          </button>
+        </article>
+        <article class="work-card" data-category="design" data-reveal>
+          <button class="card-button" data-project="design" aria-label="Open Design Systems project">
+            <span class="thumb thumb-design"></span>
+            <span class="card-meta">Design</span>
+            <strong>Interactive portfolio systems</strong>
+            <span>Web direction, layout systems, visual hierarchy, and media-first storytelling.</span>
+          </button>
+        </article>
       </div>
     </section>
 
-    <section id="about" class="section about-panel">
-      <p class="eyebrow">About</p>
-      <h2>Criz Leung</h2>
-      <p>
-        I build visual content across editing, design, and AI-assisted production. This site is a flexible
-        portfolio hub for selected works, experiments, and creative systems.
-      </p>
-      <ul class="tool-list" aria-label="Tools and skills">
-        <li>Premiere Pro</li>
-        <li>After Effects</li>
-        <li>DaVinci Resolve</li>
-        <li>ChatGPT Image</li>
-        <li>Midjourney</li>
-        <li>Veo</li>
-      </ul>
+    <section id="method" class="scene method-scene">
+      <div class="method-copy" data-reveal>
+        <p class="label">Creative Method</p>
+        <h2>A system-first approach to visual creation.</h2>
+      </div>
+      <div class="method-grid">
+        <div class="method-card" data-reveal>
+          <span>01</span>
+          <h3>Edit</h3>
+          <p>Shape rhythm, story, cut density, sound, and visual momentum.</p>
+        </div>
+        <div class="method-card" data-reveal>
+          <span>02</span>
+          <h3>Generate</h3>
+          <p>Explore AI image and AI video directions through controlled visual prompts.</p>
+        </div>
+        <div class="method-card" data-reveal>
+          <span>03</span>
+          <h3>Systemize</h3>
+          <p>Turn creative intuition into repeatable systems, templates, and workflows.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section contact-panel">
-      <p class="eyebrow">Contact</p>
-      <h2>Let’s build something visual.</h2>
-      <p>Replace the placeholders below with your real email and social links.</p>
-      <div class="contact-links">
-        <a href="mailto:hello@example.com">hello@example.com</a>
-        <a href="https://github.com/crizleung21" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
+    <section id="about" class="section about-section">
+      <div class="about-panel" data-reveal>
+        <p class="label">About</p>
+        <h2>Criz Leung builds cinematic visual systems across editing, AI imagery, AI video, and design.</h2>
+        <p>The work combines visual storytelling with structured creative workflows. This prototype uses placeholders first, then evolves as real projects, reels, and image assets are added.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-panel" data-reveal>
+        <p class="label">Contact</p>
+        <h2>For visual systems, AI creative experiments, and production work.</h2>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="https://github.com/crizleung21" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <div class="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close project details">×</button>
+      <p class="label" id="modal-label">Project System</p>
+      <h2 id="modal-title">Project title</h2>
+      <p id="modal-body">Project description.</p>
+      <div class="modal-media" aria-hidden="true"></div>
+      <div class="modal-tags" id="modal-tags"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <p>© 2026 Criz Leung. Creative Portfolio.</p>
+    <p>© 2026 Criz Leung. Hybrid Creative Systems.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
