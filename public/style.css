@@ -111,6 +111,18 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 .contact-links a:hover { color: var(--white); }
 .site-footer { width: 100%; margin: 0; padding: 28px max(22px, calc((100vw - 1600px) / 2)) 48px; color: var(--slate); border-top: 1px solid var(--line); background: var(--black); }
 
+.showreel-page { background: var(--black); color: var(--white); }
+.showreel-page .site-header { background: var(--paper); color: var(--ink); }
+.showreel-page-hero { min-height: calc(100svh - 74px); display: grid; align-content: center; gap: 34px; padding-top: 96px; padding-bottom: 80px; }
+.showreel-page-copy { width: var(--container); margin: 0 auto; max-width: 1120px; }
+.showreel-page-copy h1 { max-width: 1120px; color: var(--white); }
+.showreel-page-lede { max-width: 680px; color: var(--muted); }
+.showreel-page-player { width: var(--container); margin: 0 auto; }
+.showreel-page-placeholder { min-height: min(68vh, 760px); }
+.showreel-notes-section { padding-top: 72px; padding-bottom: 110px; }
+.showreel-notes-grid { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.showreel-return { width: var(--container); margin: 28px auto 0; }
+
 .project-modal { position: fixed; inset: 0; z-index: 80; display: none; }
 .project-modal.is-open { display: block; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.78); }
@@ -130,6 +142,7 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
   .editorial-grid { grid-template-columns: 1fr 1fr; }
   .work-card.feature { grid-row: span 1; }
   .method-scene { grid-template-columns: 1fr; }
+  .showreel-notes-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   .runway-hero { width: calc(100% - 20px); min-height: 82svh; }
@@ -142,5 +155,8 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
   .scene { min-height: auto; padding-top: 88px; padding-bottom: 70px; }
   .editorial-grid { grid-template-columns: 1fr; }
   .showreel-placeholder { min-height: 46vh; }
+  .showreel-page-hero { padding-top: 72px; }
+  .showreel-page-copy h1 { font-size: clamp(34px, 12vw, 56px); }
+  .showreel-page-placeholder { min-height: 48vh; }
   .modal-panel { inset: 12px; width: auto; padding: 24px; }
 }
