@@ -47,7 +47,7 @@ button { font: inherit; }
 .runway-hero { width: var(--container); margin: 0 auto 44px; min-height: calc(100svh - 74px); display: grid; align-items: stretch; }
 .hero-film { min-height: calc(100svh - 98px); border-radius: 10px; overflow: hidden; background: var(--black); position: relative; }
 .hero-video-placeholder { min-height: inherit; position: relative; overflow: hidden; background: #050505; color: var(--white); }
-.hero-video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; background: #000; transform: scale(1.12); transform-origin: center; }
+.hero-video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; background: #000; transform: none; }
 .film-texture { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(circle at 22% 80%, rgba(0,0,0,0.36), transparent 34%), radial-gradient(circle at 82% 30%, rgba(255,255,255,0.08), transparent 28%); mix-blend-mode: normal; opacity: 0.36; }
 .film-texture:after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 7px); opacity: 0.24; }
 .film-sweep { position: absolute; inset: -20%; z-index: 2; pointer-events: none; background: linear-gradient(105deg, transparent 18%, rgba(255,255,255,0.035), transparent 48%); animation: sweep 10s ease-in-out infinite alternate; opacity: 0.55; }
@@ -134,7 +134,7 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 @media (max-width: 680px) {
   .runway-hero { width: calc(100% - 20px); min-height: 82svh; }
   .hero-film { min-height: 78svh; }
-  .hero-video { transform: scale(1.18); }
+  .hero-video { transform: none; }
   .hero-overlay { padding: 24px; }
   .hero-copy-block { left: 24px; right: 24px; bottom: 130px; max-width: none; }
   .film-status { display: none; }
