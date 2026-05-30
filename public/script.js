@@ -36,3 +36,27 @@ aboutTabs.forEach((tab) => {
     });
   });
 });
+
+const skillViewButtons = document.querySelectorAll('[data-skill-view]');
+const skillPanels = document.querySelectorAll('[data-skill-panel]');
+
+skillViewButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = button.dataset.skillView;
+    skillViewButtons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    skillPanels.forEach((panel) => {
+      panel.classList.toggle('is-active', panel.dataset.skillPanel === target);
+    });
+  });
+});
+
+const skillGroupCards = document.querySelectorAll('[data-skill-group]');
+skillGroupCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-open');
+  });
+});
