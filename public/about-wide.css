@@ -27,9 +27,9 @@
 .about-chapter-label .label {
   text-align: left !important;
   margin: 0 !important;
-  font-size: 10px !important;
+  font-size: 12px !important;
   line-height: 1.2 !important;
-  letter-spacing: 1.35px !important;
+  letter-spacing: 1.25px !important;
   font-weight: 700 !important;
   color: var(--mid) !important;
 }
@@ -41,12 +41,12 @@
 }
 
 .about-bio-text {
-  max-width: 1120px !important;
+  max-width: 980px !important;
   margin: 0 !important;
   color: var(--ink) !important;
-  font-size: clamp(26px, 2.75vw, 46px) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -1.1px !important;
+  font-size: clamp(20px, 1.85vw, 32px) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.55px !important;
   font-weight: 400 !important;
   text-align: left !important;
 }
@@ -57,29 +57,29 @@
 }
 
 .about-base-actions .button {
-  font-size: 13px !important;
-  padding: 10px 14px !important;
+  font-size: 14px !important;
+  padding: 11px 15px !important;
 }
 
 .experience-list li {
-  grid-template-columns: minmax(130px, 180px) minmax(0, 1fr) !important;
-  padding: 14px 0 !important;
+  grid-template-columns: minmax(140px, 190px) minmax(0, 1fr) !important;
+  padding: 16px 0 !important;
 }
 
 .experience-list span {
-  font-size: 10px !important;
+  font-size: 11px !important;
   line-height: 1.2 !important;
   letter-spacing: 0.35px !important;
 }
 
 .experience-list strong {
-  font-size: 15px !important;
+  font-size: 17px !important;
   line-height: 1.25 !important;
   font-weight: 700 !important;
 }
 
 .experience-list em {
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 1.35 !important;
 }
 
@@ -91,15 +91,15 @@
 }
 
 .skills-dashboard-col {
-  gap: 18px !important;
+  gap: 20px !important;
 }
 
 .skills-group-label {
-  font-size: 10px !important;
+  font-size: 12px !important;
   line-height: 1.2 !important;
   letter-spacing: 1px !important;
   font-weight: 700 !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 7px !important;
 }
 
 .skill-cloud {
@@ -109,9 +109,9 @@
 
 .skill-cloud span {
   white-space: nowrap;
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 1.2 !important;
-  padding: 6px 11px !important;
+  padding: 7px 12px !important;
 }
 
 @media (min-width: 1280px) {
@@ -137,9 +137,9 @@
   }
 
   .about-bio-text {
-    font-size: clamp(24px, 7.4vw, 34px) !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.8px !important;
+    font-size: clamp(18px, 5.4vw, 26px) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.45px !important;
   }
 
   .skills-dashboard {
