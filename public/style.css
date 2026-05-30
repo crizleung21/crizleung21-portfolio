@@ -500,3 +500,57 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 .hero-category-list li a:hover::after {
   transform: scaleX(1);
 }
+
+/* Option C Details Panels Custom Scrollbar & Skills Dashboard Styles */
+.scrollable-pane {
+  overflow-y: auto !important;
+  max-height: 100%;
+  padding-right: 12px;
+}
+.scrollable-pane::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollable-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollable-pane::-webkit-scrollbar-thumb {
+  background: var(--soft-line);
+  border-radius: 99px;
+}
+.scrollable-pane::-webkit-scrollbar-thumb:hover {
+  background: var(--slate);
+}
+
+.skills-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  text-align: left;
+}
+.skills-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.skills-group-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--mid);
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}
+.personal-cloud span {
+  background: transparent !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: var(--slate) !important;
+  font-weight: 500;
+}
+
+@media (max-width: 680px) {
+  .skills-dashboard {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
