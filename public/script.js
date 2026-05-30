@@ -32,7 +32,6 @@ const staggerObserver = new IntersectionObserver((entries) => {
       items.forEach((item, index) => {
         item.style.transitionDelay = `${index * delayStep}ms`;
       });
-      // Small RAF to ensure delays are applied before triggering visibility
       requestAnimationFrame(() => {
         items.forEach((item) => item.classList.add('is-visible'));
       });
@@ -41,3 +40,23 @@ const staggerObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 staggerContainers.forEach((c) => staggerObserver.observe(c));
+
+// About command panel interactions
+const commandTabs = document.querySelectorAll('[data-command-target]');
+const commandPanels = document.querySelectorAll('[data-command-panel]');
+commandTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.commandTarget;
+    commandTabs.forEach((item) => item.classList.toggle('is-active', item === tab));
+    commandPanels.forEach((panel) => {
+      panel.classList.toggle('is-active', panel.dataset.commandPanel === target);
+    });
+  });
+});
+
+const skillToggleItems = document.querySelectorAll('[data-skill-toggle]');
+skillToggleItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('is-open');
+  });
+});
