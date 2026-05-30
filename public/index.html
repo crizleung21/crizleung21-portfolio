@@ -104,13 +104,12 @@
         <div class="about-tabs" data-reveal>
           <div class="about-tab-list" role="tablist" aria-label="About details">
             <button class="about-tab is-active" type="button" role="tab" aria-selected="true" data-about-tab="experience">Experience</button>
-            <button class="about-tab" type="button" role="tab" aria-selected="false" data-about-tab="professional-skills">Professional Skills</button>
-            <button class="about-tab" type="button" role="tab" aria-selected="false" data-about-tab="personal-skills">Personal Skills</button>
+            <button class="about-tab" type="button" role="tab" aria-selected="false" data-about-tab="skills">Skills</button>
             <button class="about-tab" type="button" role="tab" aria-selected="false" data-about-tab="tools">Tools</button>
           </div>
 
           <div class="about-tab-panel is-active" data-about-panel="experience" role="tabpanel">
-            <ul class="experience-list">
+            <ul class="experience-list compact-timeline">
               <li><span>2024 — Now</span><strong>You Find Limited</strong><em>Multimedia Designer</em></li>
               <li><span>2021 — 2023</span><strong>Online Marketing Genius Company Limited</strong><em>Senior Video Editor</em></li>
               <li><span>2018 — 2021</span><strong>Best Video Limited</strong><em>Video Editor</em></li>
@@ -118,97 +117,118 @@
             </ul>
           </div>
 
-          <div class="about-tab-panel" data-about-panel="professional-skills" role="tabpanel">
-            <ul class="experience-list skill-groups">
-              <li>
-                <span>Post-Production</span>
-                <div class="skill-cloud">
-                  <span>Video Editing</span>
-                  <span>Motion Graphics</span>
-                  <span>VFX &amp; Compositing</span>
-                  <span>Short-form Editing</span>
-                  <span>Color Grading</span>
-                </div>
-              </li>
-              <li>
-                <span>Production-OnSet</span>
-                <div class="skill-cloud">
-                  <span>Videography</span>
-                  <span>Camera Operation</span>
-                  <span>Audio Operation</span>
-                  <span>On-set Direction</span>
-                </div>
-              </li>
-              <li>
-                <span>Pre-Production</span>
-                <div class="skill-cloud">
-                  <span>Creative Direction</span>
-                  <span>Pre-production Planning</span>
-                </div>
-              </li>
-              <li>
-                <span>Visual Graphics</span>
-                <div class="skill-cloud">
-                  <span>Visual Design</span>
-                  <span>On-Screen Graphics</span>
-                  <span>Lower Thirds</span>
-                  <span>Infographics</span>
-                  <span>Title Design</span>
-                  <span>Subtitle Styling</span>
-                </div>
-              </li>
-              <li>
-                <span>AI Skills</span>
-                <div class="skill-cloud">
-                  <span>AI Image Direction</span>
-                  <span>AI Video Direction</span>
-                  <span>Prompt Engineering</span>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <div class="about-tab-panel" data-about-panel="skills" role="tabpanel">
+            <div class="mini-toggle" role="tablist" aria-label="Skills type">
+              <button class="mini-toggle-button is-active" type="button" role="tab" aria-selected="true" data-skill-view="professional">Professional</button>
+              <button class="mini-toggle-button" type="button" role="tab" aria-selected="false" data-skill-view="personal">Personal</button>
+            </div>
 
-          <div class="about-tab-panel" data-about-panel="personal-skills" role="tabpanel">
-            <div class="skill-cloud">
-              <span>Creative Problem Solving</span>
-              <span>Creative Judgement</span>
-              <span>Visual Sensibility</span>
-              <span>Detail-minded Execution</span>
-              <span>Quality Control</span>
-              <span>Project Coordination</span>
-              <span>Deadline Management</span>
-              <span>Client Communication</span>
-              <span>Team Leadership</span>
-              <span>Adaptability</span>
+            <div class="skill-view is-active" data-skill-panel="professional" role="tabpanel">
+              <div class="skill-group-grid">
+                <button class="skill-group-card is-open" type="button" data-skill-group>
+                  <span>Post-Production</span>
+                  <strong>Editing, motion, finishing.</strong>
+                  <div class="skill-cloud skill-group-content">
+                    <span>Video Editing</span>
+                    <span>Motion Graphics</span>
+                    <span>VFX &amp; Compositing</span>
+                    <span>Short-form Editing</span>
+                    <span>Color Grading</span>
+                  </div>
+                </button>
+
+                <button class="skill-group-card" type="button" data-skill-group>
+                  <span>Production-OnSet</span>
+                  <strong>Shooting and on-set support.</strong>
+                  <div class="skill-cloud skill-group-content">
+                    <span>Videography</span>
+                    <span>Camera Operation</span>
+                    <span>Audio Operation</span>
+                    <span>On-set Direction</span>
+                  </div>
+                </button>
+
+                <button class="skill-group-card" type="button" data-skill-group>
+                  <span>Pre-Production</span>
+                  <strong>Planning and creative direction.</strong>
+                  <div class="skill-cloud skill-group-content">
+                    <span>Creative Direction</span>
+                    <span>Pre-production Planning</span>
+                  </div>
+                </button>
+
+                <button class="skill-group-card" type="button" data-skill-group>
+                  <span>Visual Graphics</span>
+                  <strong>On-screen graphics and titles.</strong>
+                  <div class="skill-cloud skill-group-content">
+                    <span>Visual Design</span>
+                    <span>On-Screen Graphics</span>
+                    <span>Lower Thirds</span>
+                    <span>Infographics</span>
+                    <span>Title Design</span>
+                    <span>Subtitle Styling</span>
+                  </div>
+                </button>
+
+                <button class="skill-group-card" type="button" data-skill-group>
+                  <span>AI Skills</span>
+                  <strong>Image, video, and prompt workflows.</strong>
+                  <div class="skill-cloud skill-group-content">
+                    <span>AI Image Direction</span>
+                    <span>AI Video Direction</span>
+                    <span>Prompt Engineering</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div class="skill-view" data-skill-panel="personal" role="tabpanel">
+              <div class="skill-cloud compact-skill-cloud">
+                <span>Creative Problem Solving</span>
+                <span>Creative Judgement</span>
+                <span>Visual Sensibility</span>
+                <span>Detail-minded Execution</span>
+                <span>Quality Control</span>
+                <span>Project Coordination</span>
+                <span>Deadline Management</span>
+                <span>Client Communication</span>
+                <span>Team Leadership</span>
+                <span>Adaptability</span>
+              </div>
             </div>
           </div>
 
           <div class="about-tab-panel" data-about-panel="tools" role="tabpanel">
-            <ul class="experience-list skill-groups">
-              <li>
+            <div class="tool-stack-grid">
+              <article class="tool-stack-card">
                 <span>Post-Production</span>
+                <strong>Editing and motion stack.</strong>
                 <div class="skill-cloud">
                   <span>Adobe Premiere Pro</span>
                   <span>Adobe After Effects</span>
                 </div>
-              </li>
-              <li>
+              </article>
+
+              <article class="tool-stack-card">
                 <span>Design</span>
+                <strong>Graphic and visual design tools.</strong>
                 <div class="skill-cloud">
                   <span>Adobe Illustrator</span>
                   <span>Adobe Photoshop</span>
                 </div>
-              </li>
-              <li>
+              </article>
+
+              <article class="tool-stack-card">
                 <span>AI Creative</span>
+                <strong>Image and video generation tools.</strong>
                 <div class="skill-cloud">
                   <span>ChatGPT Image</span>
                   <span>Midjourney</span>
                   <span>Nano Banana Pro</span>
                   <span>Veo</span>
                 </div>
-              </li>
-            </ul>
+              </article>
+            </div>
           </div>
         </div>
       </div>
