@@ -20,65 +20,24 @@ const updateParallax = () => {
 window.addEventListener('scroll', updateParallax, { passive: true });
 updateParallax();
 
-const narrativeText = document.querySelector('.about-narrative-text');
-const triggers = document.querySelectorAll('.reveal-trigger');
-const panes = document.querySelectorAll('.about-detail-pane');
-
-let hoverTimeout = null;
-
-const activatePane = (targetPaneId) => {
-  panes.forEach((pane) => {
-    const isTarget = pane.dataset.pane === targetPaneId;
-    pane.classList.toggle('is-active', isTarget);
-  });
-};
-
-triggers.forEach((trigger) => {
-  const target = trigger.dataset.target;
-  
-  // Desktop hover behaviors
-  trigger.addEventListener('mouseenter', () => {
-    if (hoverTimeout) clearTimeout(hoverTimeout);
-    
-    // Visual focus triggers
-    narrativeText.classList.add('has-hover');
-    triggers.forEach((t) => t.classList.toggle('is-active-trigger', t === trigger));
-    
-    activatePane(target);
-  });
-  
-  // Mobile tap support
-  trigger.addEventListener('click', (e) => {
-    const isAlreadyActive = trigger.classList.contains('is-active-trigger');
-    
-    if (isAlreadyActive) {
-      // Toggle off back to default pane
-      resetToDefault();
-    } else {
-      if (hoverTimeout) clearTimeout(hoverTimeout);
-      narrativeText.classList.add('has-hover');
-      triggers.forEach((t) => t.classList.toggle('is-active-trigger', t === trigger));
-      activatePane(target);
+// Stagger animation for scroll chapters
+const staggerContainers = document.querySelectorAll('[data-stagger]');
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const items = entry.target.querySelectorAll('.stagger-item');
+      const delayStep = entry.target.dataset.staggerDelay
+        ? Number(entry.target.dataset.staggerDelay)
+        : 50;
+      items.forEach((item, index) => {
+        item.style.transitionDelay = `${index * delayStep}ms`;
+      });
+      // Small RAF to ensure delays are applied before triggering visibility
+      requestAnimationFrame(() => {
+        items.forEach((item) => item.classList.add('is-visible'));
+      });
+      staggerObserver.unobserve(entry.target);
     }
-    e.stopPropagation();
   });
-});
-
-const resetToDefault = () => {
-  if (narrativeText) narrativeText.classList.remove('has-hover');
-  triggers.forEach((t) => t.classList.remove('is-active-trigger'));
-  activatePane('default');
-};
-
-// Return to default placeholder panel when cursor leaves the columns
-const aboutContainer = document.querySelector('.about-interactive-container');
-if (aboutContainer) {
-  aboutContainer.addEventListener('mouseleave', () => {
-    hoverTimeout = setTimeout(resetToDefault, 200);
-  });
-}
-
-// Close details overlay on tapping anywhere else on mobile
-document.addEventListener('click', () => {
-  resetToDefault();
-});
+}, { threshold: 0.12 });
+staggerContainers.forEach((c) => staggerObserver.observe(c));
