@@ -82,8 +82,12 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 .works-section, .about-section, .contact-section { padding-top: 110px; padding-bottom: 110px; }
 .filter-bar, .contact-links, .modal-tags { display: flex; flex-wrap: wrap; gap: 10px; }
 .filter-bar { margin: 28px 0; }
+.video-subfilter { display: none; margin-top: -12px; margin-bottom: 32px; }
+.video-subfilter.is-visible { display: flex; }
 .filter-button { border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; background: transparent; color: var(--white); font-size: 14px; font-weight: 600; cursor: pointer; }
+.video-subfilter .filter-button { color: var(--muted); font-size: 12px; padding: 8px 10px; }
 .filter-button.is-active { background: var(--white); color: var(--black); }
+.video-subfilter .filter-button.is-active { color: var(--black); }
 .editorial-grid { display: grid; grid-template-columns: 1.25fr 0.75fr 0.75fr; grid-auto-rows: minmax(320px, auto); gap: 12px; }
 .work-card { border-radius: 8px; min-height: 320px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); transition: opacity 220ms ease, transform 220ms ease; }
 .work-card.is-hidden { display: none; }
@@ -99,7 +103,10 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 .card-meta, .card-button strong, .card-button span:not(.thumb) { position: relative; z-index: 1; }
 .card-meta { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.35px; }
 .card-button strong { font-size: 24px; line-height: 1; font-weight: 400; }
-.card-button span:last-child { color: var(--muted); max-width: 460px; font-size: 14px; line-height: 1.35; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.work-tags em { border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; color: rgba(255,255,255,0.72); font-size: 11px; font-style: normal; padding: 5px 8px; }
+.work-summary { color: var(--muted); max-width: 520px; font-size: 14px; line-height: 1.35; }
+.card-button span:last-child { color: var(--muted); max-width: 520px; font-size: 14px; line-height: 1.35; }
 
 .method-scene { grid-template-columns: 0.95fr 1.05fr; gap: 28px; }
 .method-grid { display: grid; gap: 12px; }
@@ -154,6 +161,8 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
   .hero-lanes { left: 24px; right: 24px; bottom: 24px; grid-template-columns: 1fr; gap: 8px; font-size: 11px; }
   .scene { min-height: auto; padding-top: 88px; padding-bottom: 70px; }
   .editorial-grid { grid-template-columns: 1fr; }
+  .filter-button { font-size: 12px; padding: 8px 10px; }
+  .video-subfilter { margin-top: -8px; }
   .showreel-placeholder { min-height: 46vh; }
   .showreel-page-hero { padding-top: 72px; }
   .showreel-page-copy h1 { font-size: clamp(34px, 12vw, 56px); }
