@@ -34,37 +34,45 @@ const projectData = {
     title: "Interactive portfolio system",
     body: "A placeholder case study for design and creative systems. Use this slot for web direction, portfolio IA, visual hierarchy, repeatable workflows, and prompt or production systems.",
     tags: ["Design", "Web", "Creative System", "Portfolio"]
-  },
-  "category-video": {
-    label: "Explore Category / Video",
-    title: "Video — 30 public works",
-    body: "The full video lane will hold corporate and brand films, event recaps, interview profiles, product and promo edits, narrative micro films, motion and compositing work, and social or reels formats. Homepage shows selected outcomes first; the full archive can be expanded later.",
-    tags: ["30 Public Works", "Corporate & Brand", "Event & Recap", "Social & Reels"]
-  },
-  "category-ai-image": {
-    label: "Explore Category / AI Image",
-    title: "AI Image — visual concepts",
-    body: "A category for AI image direction, cinematic stills, character frames, visual concept development, and source-aware image generation systems.",
-    tags: ["AI Image", "Concept Frames", "Character", "Visual Direction"]
-  },
-  "category-ai-video": {
-    label: "Explore Category / AI Video",
-    title: "AI Video — motion experiments",
-    body: "A category for generated motion tests, AI video experiments, shot continuity, camera movement studies, and cinematic visual transitions.",
-    tags: ["AI Video", "Motion Tests", "Continuity", "Generated Shots"]
-  },
-  "category-design": {
-    label: "Explore Category / Design",
-    title: "Design — visual systems",
-    body: "A category for web design, layout direction, interface rhythm, visual hierarchy, and media-first presentation systems.",
-    tags: ["Design", "Web", "Layout", "Visual Direction"]
-  },
-  "category-systems": {
-    label: "Explore Category / Systems",
-    title: "Systems — creative workflows",
-    body: "A category for prompt systems, production templates, reusable creative workflows, design logic, and structured visual production methods.",
-    tags: ["Systems", "Prompt Architecture", "Workflow", "Templates"]
   }
+};
+
+const filterCopy = {
+  all: {
+    heading: "A curated selection across editing, AI visuals, design, and systems.",
+    status: "Showing 6 featured outcomes."
+  },
+  video: {
+    heading: "Video lane: editing outcomes across commercial, event, interview, narrative, motion, and social formats.",
+    status: "Video lane · 30 public works across 7 formats."
+  },
+  image: {
+    heading: "AI image concepts, cinematic stills, character frames, and visual direction experiments.",
+    status: "Showing AI image and visual concept work."
+  },
+  "ai-video": {
+    heading: "AI video experiments, generated motion tests, continuity studies, and cinematic shot development.",
+    status: "Showing AI video and motion experiment work."
+  },
+  design: {
+    heading: "Media-first web, layout, interface rhythm, and visual direction systems.",
+    status: "Showing design-led portfolio and visual system work."
+  },
+  systems: {
+    heading: "Prompt systems, reusable templates, creative workflows, and production logic.",
+    status: "Showing creative system and workflow work."
+  }
+};
+
+const videoFilterCopy = {
+  "all-video": "Video lane · 30 public works across 7 formats.",
+  "corporate-brand": "Corporate & Brand · company profiles, brand stories, interview-led films, and executive communication.",
+  "event-recap": "Event & Recap · highlight films, conferences, launches, and live-event energy.",
+  "interview-profile": "Interview & Profile · testimonials, human stories, dialogue structure, and profile edits.",
+  "product-promo": "Product & Promo · launches, product films, campaign edits, and promotional content.",
+  narrative: "Narrative · micro films, cinematic shorts, emotional pacing, and story-led sequences.",
+  "motion-compositing": "Motion & Compositing · motion graphics, green screen, keying, and visual post-production.",
+  "social-reels": "Social & Reels · vertical cuts, short-form pacing, hooks, and platform-specific edits."
 };
 
 const revealItems = document.querySelectorAll('[data-reveal]');
@@ -88,6 +96,83 @@ const updateParallax = () => {
 };
 window.addEventListener('scroll', updateParallax, { passive: true });
 updateParallax();
+
+const filterButtons = document.querySelectorAll('[data-filter]');
+const videoFilterButtons = document.querySelectorAll('[data-video-filter]');
+const videoSubfilter = document.querySelector('.video-subfilter');
+const cards = document.querySelectorAll('.work-card');
+const worksHeading = document.querySelector('#works-heading');
+const worksStatus = document.querySelector('#works-status');
+const grid = document.querySelector('.smart-filter-grid');
+
+let activePrimaryFilter = 'all';
+let activeVideoFilter = 'all-video';
+
+const cardHasCategory = (card, category) => {
+  const categories = (card.dataset.category || '').split(' ');
+  return categories.includes(category);
+};
+
+const updateCopy = () => {
+  const copy = filterCopy[activePrimaryFilter] || filterCopy.all;
+  if (worksHeading) worksHeading.textContent = copy.heading;
+  if (worksStatus) {
+    worksStatus.textContent = activePrimaryFilter === 'video'
+      ? (videoFilterCopy[activeVideoFilter] || copy.status)
+      : copy.status;
+  }
+};
+
+const updateWorkFilters = () => {
+  const showVideoSubfilter = activePrimaryFilter === 'video';
+  if (videoSubfilter) {
+    videoSubfilter.classList.toggle('is-visible', showVideoSubfilter);
+    videoSubfilter.setAttribute('aria-hidden', showVideoSubfilter ? 'false' : 'true');
+  }
+
+  if (grid) grid.classList.add('is-filtering');
+
+  cards.forEach((card) => {
+    let show = activePrimaryFilter === 'all' || cardHasCategory(card, activePrimaryFilter);
+
+    if (activePrimaryFilter === 'video' && activeVideoFilter !== 'all-video') {
+      show = show && card.dataset.videoSubcategory === activeVideoFilter;
+    }
+
+    card.classList.toggle('is-hidden', !show);
+  });
+
+  updateCopy();
+
+  window.setTimeout(() => {
+    if (grid) grid.classList.remove('is-filtering');
+  }, 180);
+};
+
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activePrimaryFilter = button.dataset.filter;
+    filterButtons.forEach((btn) => btn.classList.remove('is-active'));
+    button.classList.add('is-active');
+
+    if (activePrimaryFilter !== 'video') {
+      activeVideoFilter = 'all-video';
+      videoFilterButtons.forEach((btn) => btn.classList.toggle('is-active', btn.dataset.videoFilter === 'all-video'));
+    }
+
+    updateWorkFilters();
+  });
+});
+
+videoFilterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activeVideoFilter = button.dataset.videoFilter;
+    videoFilterButtons.forEach((btn) => btn.classList.remove('is-active'));
+    button.classList.add('is-active');
+    updateWorkFilters();
+  });
+});
+updateWorkFilters();
 
 const modal = document.querySelector('.project-modal');
 const modalLabel = document.querySelector('#modal-label');
