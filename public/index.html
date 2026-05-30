@@ -91,148 +91,166 @@
       </div>
     </section>
 
-    <section id="about" class="about-section">
-
-      <!-- Chapter 0: Bio Statement -->
-      <div class="about-chapter" data-reveal>
-        <div class="about-chapter-label">
+    <section id="about" class="about-section about-command-section" data-reveal>
+      <div class="about-command-shell">
+        <aside class="about-command-profile">
           <p class="label">About</p>
-        </div>
-        <div class="about-chapter-content">
-          <h2 class="about-bio-text">
-            I’m Chris Leung, a senior video editor and hybrid creative systems builder. Guided by creative judgement and visual sensibility, and backed by 8 years of production experience, I bring professional craft across post-production and AI, powered by industry-leading tools.
-          </h2>
-          <div class="about-base-actions">
+          <h2>Chris Leung</h2>
+          <p class="about-role">Senior Video Editor / Hybrid Creative Systems Builder</p>
+          <p class="about-short-bio">Building cinematic media systems across post-production, AI image, AI video, and visual design.</p>
+          <div class="about-command-actions">
             <a class="button light-button" href="CV_ChrisLeung.pdf" download>Download CV</a>
             <a class="button ghost-button" href="mailto:crizleung21@gmail.com">Email</a>
           </div>
-        </div>
-      </div>
+        </aside>
 
-      <!-- Chapter 1: Experience -->
-      <div class="about-chapter" data-reveal data-stagger>
-        <div class="about-chapter-label">
-          <p class="label">Experience</p>
-        </div>
-        <div class="about-chapter-content">
-          <ul class="experience-list">
-            <li class="stagger-item"><span>2024 — Now</span><strong>You Find Limited</strong><em>Multimedia Designer</em></li>
-            <li class="stagger-item"><span>2021 — 2023</span><strong>Online Marketing Genius Company Limited</strong><em>Senior Video Editor</em></li>
-            <li class="stagger-item"><span>2018 — 2021</span><strong>Best Video Limited</strong><em>Video Editor</em></li>
-            <li class="stagger-item"><span>2015 — 2018</span><strong>Giraffe International Production Limited</strong><em>Videographer</em></li>
-          </ul>
-        </div>
-      </div>
+        <div class="about-command-panel">
+          <nav class="about-command-menu" aria-label="About panel navigation">
+            <button class="about-command-tab is-active" type="button" data-command-target="experience">
+              <span>01</span>
+              <strong>Experience</strong>
+            </button>
+            <button class="about-command-tab" type="button" data-command-target="skills">
+              <span>02</span>
+              <strong>Skills</strong>
+            </button>
+            <button class="about-command-tab" type="button" data-command-target="tools">
+              <span>03</span>
+              <strong>Tools</strong>
+            </button>
+            <button class="about-command-tab" type="button" data-command-target="personal">
+              <span>04</span>
+              <strong>Personal</strong>
+            </button>
+          </nav>
 
-      <!-- Chapter 2: Professional Skills -->
-      <div class="about-chapter" data-reveal data-stagger>
-        <div class="about-chapter-label">
-          <p class="label">Professional Skills</p>
-        </div>
-        <div class="about-chapter-content">
-          <div class="skills-dashboard">
-            <div class="skills-dashboard-col">
-              <span class="skills-group-label">Post-Production</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Video Editing</span>
-                <span class="stagger-item">Motion Graphics</span>
-                <span class="stagger-item">VFX &amp; Compositing</span>
-                <span class="stagger-item">Short-form Editing</span>
-                <span class="stagger-item">Color Grading</span>
+          <div class="about-command-content">
+            <div class="command-panel is-active" data-command-panel="experience">
+              <div class="panel-heading">
+                <span>8 Years Production Experience</span>
+                <p>Video editing, multimedia design, production, and post-production craft.</p>
+              </div>
+              <ul class="command-timeline">
+                <li><span>2024 — Now</span><strong>You Find Limited</strong><em>Multimedia Designer</em></li>
+                <li><span>2021 — 2023</span><strong>Online Marketing Genius Company Limited</strong><em>Senior Video Editor</em></li>
+                <li><span>2018 — 2021</span><strong>Best Video Limited</strong><em>Video Editor</em></li>
+                <li><span>2015 — 2018</span><strong>Giraffe International Production Limited</strong><em>Videographer</em></li>
+              </ul>
+            </div>
+
+            <div class="command-panel" data-command-panel="skills">
+              <div class="panel-heading">
+                <span>Professional Skill System</span>
+                <p>Click a group to expand the detailed capabilities.</p>
               </div>
 
-              <span class="skills-group-label">Production</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Videography</span>
-                <span class="stagger-item">Camera Operation</span>
-                <span class="stagger-item">Audio Operation</span>
-                <span class="stagger-item">On-set Direction</span>
-              </div>
+              <div class="skill-accordion">
+                <button class="skill-accordion-item is-open" type="button" data-skill-toggle>
+                  <span>Post-Production</span>
+                  <strong>Editing, motion, finishing.</strong>
+                  <div class="skill-cloud skill-accordion-content">
+                    <span>Video Editing</span>
+                    <span>Motion Graphics</span>
+                    <span>VFX &amp; Compositing</span>
+                    <span>Short-form Editing</span>
+                    <span>Color Grading</span>
+                  </div>
+                </button>
 
-              <span class="skills-group-label">Pre-Production</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Creative Direction</span>
-                <span class="stagger-item">Pre-production Planning</span>
+                <button class="skill-accordion-item" type="button" data-skill-toggle>
+                  <span>Production-OnSet</span>
+                  <strong>Shooting and on-set support.</strong>
+                  <div class="skill-cloud skill-accordion-content">
+                    <span>Videography</span>
+                    <span>Camera Operation</span>
+                    <span>Audio Operation</span>
+                    <span>On-set Direction</span>
+                  </div>
+                </button>
+
+                <button class="skill-accordion-item" type="button" data-skill-toggle>
+                  <span>Pre-Production</span>
+                  <strong>Planning and creative direction.</strong>
+                  <div class="skill-cloud skill-accordion-content">
+                    <span>Creative Direction</span>
+                    <span>Pre-production Planning</span>
+                  </div>
+                </button>
+
+                <button class="skill-accordion-item" type="button" data-skill-toggle>
+                  <span>Visual Graphics</span>
+                  <strong>On-screen graphics and titles.</strong>
+                  <div class="skill-cloud skill-accordion-content">
+                    <span>Visual Design</span>
+                    <span>On-Screen Graphics</span>
+                    <span>Lower Thirds</span>
+                    <span>Infographics</span>
+                    <span>Title Design</span>
+                    <span>Subtitle Styling</span>
+                  </div>
+                </button>
+
+                <button class="skill-accordion-item" type="button" data-skill-toggle>
+                  <span>AI Skills</span>
+                  <strong>Image, video, and prompt workflows.</strong>
+                  <div class="skill-cloud skill-accordion-content">
+                    <span>AI Image Direction</span>
+                    <span>AI Video Direction</span>
+                    <span>Prompt Engineering</span>
+                  </div>
+                </button>
               </div>
             </div>
 
-            <div class="skills-dashboard-col">
-              <span class="skills-group-label">Visual Graphics</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Visual Design</span>
-                <span class="stagger-item">On-Screen Graphics</span>
-                <span class="stagger-item">Lower Thirds</span>
-                <span class="stagger-item">Infographics</span>
-                <span class="stagger-item">Title Design</span>
-                <span class="stagger-item">Subtitle Styling</span>
+            <div class="command-panel" data-command-panel="tools">
+              <div class="panel-heading">
+                <span>Production Tool Stack</span>
+                <p>Core software and AI creative tools used across post-production and visual development.</p>
               </div>
+              <div class="tool-command-grid">
+                <article>
+                  <span>Post-Production</span>
+                  <div class="skill-cloud">
+                    <span>Adobe Premiere Pro</span>
+                    <span>Adobe After Effects</span>
+                  </div>
+                </article>
+                <article>
+                  <span>Design</span>
+                  <div class="skill-cloud">
+                    <span>Adobe Illustrator</span>
+                    <span>Adobe Photoshop</span>
+                  </div>
+                </article>
+                <article>
+                  <span>AI Creative</span>
+                  <div class="skill-cloud">
+                    <span>ChatGPT Image</span>
+                    <span>Midjourney</span>
+                    <span>Nano Banana Pro</span>
+                    <span>Veo</span>
+                  </div>
+                </article>
+              </div>
+            </div>
 
-              <span class="skills-group-label">AI Skills</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">AI Image Direction</span>
-                <span class="stagger-item">AI Video Direction</span>
-                <span class="stagger-item">Prompt Engineering</span>
+            <div class="command-panel" data-command-panel="personal">
+              <div class="panel-heading">
+                <span>Core Working Traits</span>
+                <p>Six high-value working qualities for creative production and client delivery.</p>
+              </div>
+              <div class="personal-core-grid">
+                <span>Creative Judgement</span>
+                <span>Visual Sensibility</span>
+                <span>Quality Control</span>
+                <span>Project Coordination</span>
+                <span>Client Communication</span>
+                <span>Adaptability</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Chapter 3: Tools -->
-      <div class="about-chapter" data-reveal data-stagger>
-        <div class="about-chapter-label">
-          <p class="label">Tools</p>
-        </div>
-        <div class="about-chapter-content">
-          <div class="skills-dashboard">
-            <div class="skills-dashboard-col">
-              <span class="skills-group-label">Post-Production</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Adobe Premiere Pro</span>
-                <span class="stagger-item">Adobe After Effects</span>
-              </div>
-
-              <span class="skills-group-label">Design</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">Adobe Illustrator</span>
-                <span class="stagger-item">Adobe Photoshop</span>
-              </div>
-            </div>
-
-            <div class="skills-dashboard-col">
-              <span class="skills-group-label">AI Creative</span>
-              <div class="skill-cloud mini-cloud">
-                <span class="stagger-item">ChatGPT Image</span>
-                <span class="stagger-item">Midjourney</span>
-                <span class="stagger-item">Nano Banana Pro</span>
-                <span class="stagger-item">Veo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chapter 4: Personal Skills -->
-      <div class="about-chapter" data-reveal data-stagger>
-        <div class="about-chapter-label">
-          <p class="label">Personal Skills</p>
-        </div>
-        <div class="about-chapter-content">
-          <div class="skill-cloud">
-            <span class="stagger-item">Creative Problem Solving</span>
-            <span class="stagger-item">Creative Judgement</span>
-            <span class="stagger-item">Visual Sensibility</span>
-            <span class="stagger-item">Detail-minded Execution</span>
-            <span class="stagger-item">Quality Control</span>
-            <span class="stagger-item">Project Coordination</span>
-            <span class="stagger-item">Deadline Management</span>
-            <span class="stagger-item">Client Communication</span>
-            <span class="stagger-item">Team Leadership</span>
-            <span class="stagger-item">Adaptability</span>
-          </div>
-        </div>
-      </div>
-
     </section>
   </main>
 
