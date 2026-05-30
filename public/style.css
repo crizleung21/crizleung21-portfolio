@@ -119,76 +119,39 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
   overflow: hidden;
 }
 .contact-panel { border: 1px solid var(--line); border-radius: 8px; background: #0c0c0c; padding: 40px; }
-.about-panel-interactive {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  align-items: center;
-}
-.about-copy {
-  padding: 54px 40px 34px;
-  text-align: center;
-}
+.about-panel-interactive { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; }
+.about-copy { padding: 54px 40px 34px; text-align: center; }
 .about-copy .label { margin-bottom: 24px; }
-.about-statement {
-  display: grid;
-  gap: 16px;
-  max-width: 880px;
-  margin: 0 auto;
-}
-.about-statement p {
-  color: #475467;
-  font-size: clamp(20px, 1.65vw, 28px);
-  line-height: 1.18;
-  letter-spacing: -0.42px;
-}
-.about-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
-}
-.about-tabs {
-  width: 100%;
-  border-top: 1px solid var(--soft-line);
-  background: var(--soft-card);
-  padding: 28px 40px 40px;
-}
-.about-tab-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 22px;
-}
-.about-tab { border: 1px solid var(--soft-line); border-radius: 6px; padding: 9px 12px; background: transparent; color: #667085; font-size: 13px; font-weight: 700; cursor: pointer; }
-.about-tab.is-active { background: var(--ink); color: var(--white); border-color: var(--ink); }
-.about-tab-panel { display: none; }
-.about-tab-panel.is-active {
-  display: block;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.experience-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+.about-statement { display: grid; gap: 16px; max-width: 880px; margin: 0 auto; }
+.about-statement p { color: #475467; font-size: clamp(20px, 1.65vw, 28px); line-height: 1.18; letter-spacing: -0.42px; }
+.about-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 30px; }
+.about-tabs { width: 100%; border-top: 1px solid var(--soft-line); background: var(--soft-card); padding: 28px 40px 40px; }
+.about-tab-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 22px; }
+.about-tab, .mini-toggle-button { border: 1px solid var(--soft-line); border-radius: 6px; padding: 9px 12px; background: transparent; color: #667085; font-size: 13px; font-weight: 700; cursor: pointer; }
+.about-tab.is-active, .mini-toggle-button.is-active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.about-tab-panel, .skill-view { display: none; }
+.about-tab-panel.is-active { display: block; max-width: 980px; margin: 0 auto; }
+.skill-view.is-active { display: block; }
+.mini-toggle { display: flex; justify-content: center; gap: 8px; margin-bottom: 18px; }
+.experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 0; }
 .experience-list li { border: 1px solid var(--soft-line); border-radius: 8px; background: var(--paper); padding: 16px; display: grid; gap: 6px; }
 .experience-list span { color: #667085; font-size: 11px; text-transform: uppercase; letter-spacing: 0.35px; }
 .experience-list strong { color: var(--ink); font-size: 16px; line-height: 1.15; }
 .experience-list em { color: #667085; font-size: 13px; font-style: normal; }
-.skill-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
+.skill-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .skill-cloud span { border: 1px solid var(--soft-line); border-radius: 999px; background: var(--paper); padding: 9px 12px; color: #344054; font-size: 13px; }
+.compact-timeline li { text-align: left; }
+.skill-group-grid, .tool-stack-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.skill-group-card, .tool-stack-card { border: 1px solid var(--soft-line); border-radius: 8px; background: var(--paper); color: var(--ink); padding: 16px; text-align: left; display: grid; gap: 8px; min-height: 138px; }
+.skill-group-card { cursor: pointer; }
+.skill-group-card span, .tool-stack-card span { color: #667085; font-size: 11px; text-transform: uppercase; letter-spacing: 0.35px; font-weight: 700; }
+.skill-group-card strong, .tool-stack-card strong { color: var(--ink); font-size: 15px; line-height: 1.2; font-weight: 600; }
+.skill-group-card:hover, .tool-stack-card:hover { border-color: #aeb5bd; }
+.skill-group-content { display: none; justify-content: flex-start; padding-top: 8px; }
+.skill-group-card.is-open .skill-group-content { display: flex; }
+.skill-group-card .skill-cloud span, .tool-stack-card .skill-cloud span { font-size: 12px; padding: 7px 10px; }
+.tool-stack-card .skill-cloud { justify-content: flex-start; margin-top: 4px; }
+.compact-skill-cloud { max-width: 860px; margin: 0 auto; }
 .contact-panel h2 { max-width: 1100px; }
 .contact-links, .modal-tags { display: flex; flex-wrap: wrap; gap: 10px; }
 .contact-links a { color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; font-size: 14px; }
@@ -227,6 +190,7 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
 
 @media (max-width: 1100px) {
   .direction-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-group-grid, .tool-stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 980px) {
   .site-header { grid-template-columns: 1fr; gap: 12px; }
@@ -253,7 +217,8 @@ p { color: var(--slate); line-height: 1.42; font-size: 16px; letter-spacing: -0.
   .about-copy { padding: 34px 24px 28px; }
   .about-statement p { font-size: 20px; }
   .about-tabs { padding: 22px 18px 28px; }
-  .experience-list { grid-template-columns: 1fr; }
+  .experience-list, .skill-group-grid, .tool-stack-grid { grid-template-columns: 1fr; }
+  .mini-toggle { flex-wrap: wrap; }
   .contact-panel { padding: 26px; }
   .category-hero, .showreel-page-hero { padding-top: 72px; }
   .category-page-copy h1, .showreel-page-copy h1 { font-size: clamp(34px, 12vw, 56px); }
