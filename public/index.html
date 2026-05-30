@@ -49,11 +49,32 @@
 
     <section id="works" class="section works-section dark-section">
       <div class="section-kicker wide" data-reveal>
-        <p class="label">Featured Works</p>
-        <h2>Six selected outcomes across editing, AI visuals, and creative systems.</h2>
+        <p class="label">Selected Works</p>
+        <h2 id="works-heading">A curated selection across editing, AI visuals, design, and systems.</h2>
+        <p class="works-status" id="works-status">Showing 6 featured outcomes.</p>
       </div>
 
-      <div class="work-grid editorial-grid featured-grid">
+      <div class="filter-bar primary-filter" aria-label="Primary project filters" data-reveal>
+        <button class="filter-button is-active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="video">Video</button>
+        <button class="filter-button" data-filter="image">AI Image</button>
+        <button class="filter-button" data-filter="ai-video">AI Video</button>
+        <button class="filter-button" data-filter="design">Design</button>
+        <button class="filter-button" data-filter="systems">Systems</button>
+      </div>
+
+      <div class="filter-bar video-subfilter" aria-label="Video subcategory filters" data-reveal aria-hidden="true">
+        <button class="filter-button is-active" data-video-filter="all-video">All Video</button>
+        <button class="filter-button" data-video-filter="corporate-brand">Corporate & Brand</button>
+        <button class="filter-button" data-video-filter="event-recap">Event & Recap</button>
+        <button class="filter-button" data-video-filter="interview-profile">Interview & Profile</button>
+        <button class="filter-button" data-video-filter="product-promo">Product & Promo</button>
+        <button class="filter-button" data-video-filter="narrative">Narrative</button>
+        <button class="filter-button" data-video-filter="motion-compositing">Motion & Compositing</button>
+        <button class="filter-button" data-video-filter="social-reels">Social & Reels</button>
+      </div>
+
+      <div class="work-grid editorial-grid smart-filter-grid">
         <article class="work-card feature" data-category="video" data-video-subcategory="corporate-brand" data-reveal>
           <button class="card-button" data-project="corporate" aria-label="Open Corporate and Brand project">
             <span class="thumb thumb-video"></span>
@@ -111,64 +132,6 @@
             <strong>Interactive portfolio system</strong>
             <span class="work-tags"><em>Design</em><em>Web</em><em>Creative System</em></span>
             <span class="work-summary">A media-first portfolio framework for presenting motion work, AI visuals, and repeatable creative methods.</span>
-          </button>
-        </article>
-      </div>
-    </section>
-
-    <section id="categories" class="section categories-section dark-section">
-      <div class="section-kicker wide" data-reveal>
-        <p class="label">Explore Categories</p>
-        <h2>Explore the full creative lanes behind the featured work.</h2>
-      </div>
-
-      <div class="category-grid">
-        <article class="category-card category-card-feature" data-reveal>
-          <button class="category-button" data-project="category-video" aria-label="Open Video category overview">
-            <span class="category-meta">Video</span>
-            <strong>30 public works</strong>
-            <p>Editing outcomes across brand, events, interviews, product films, narrative shorts, motion graphics, and social formats.</p>
-            <ul class="category-sublist">
-              <li>Corporate & Brand</li>
-              <li>Event & Recap</li>
-              <li>Interview & Profile</li>
-              <li>Product & Promo</li>
-              <li>Narrative</li>
-              <li>Motion & Compositing</li>
-              <li>Social & Reels</li>
-            </ul>
-          </button>
-        </article>
-
-        <article class="category-card" data-reveal>
-          <button class="category-button" data-project="category-ai-image" aria-label="Open AI Image category overview">
-            <span class="category-meta">AI Image</span>
-            <strong>Visual concepts</strong>
-            <p>Cinematic stills, character frames, image direction, and source-aware visual experiments.</p>
-          </button>
-        </article>
-
-        <article class="category-card" data-reveal>
-          <button class="category-button" data-project="category-ai-video" aria-label="Open AI Video category overview">
-            <span class="category-meta">AI Video</span>
-            <strong>Motion experiments</strong>
-            <p>Generated shots, continuity tests, camera language, and cinematic motion explorations.</p>
-          </button>
-        </article>
-
-        <article class="category-card" data-reveal>
-          <button class="category-button" data-project="category-design" aria-label="Open Design category overview">
-            <span class="category-meta">Design</span>
-            <strong>Visual systems</strong>
-            <p>Web, layout, visual direction, interface rhythm, and media-first presentation design.</p>
-          </button>
-        </article>
-
-        <article class="category-card" data-reveal>
-          <button class="category-button" data-project="category-systems" aria-label="Open Systems category overview">
-            <span class="category-meta">Systems</span>
-            <strong>Creative workflows</strong>
-            <p>Prompt systems, reusable templates, production logic, and structured creative frameworks.</p>
           </button>
         </article>
       </div>
