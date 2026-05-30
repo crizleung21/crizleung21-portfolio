@@ -50,48 +50,87 @@
     <section id="works" class="section works-section dark-section">
       <div class="section-kicker wide" data-reveal>
         <p class="label">Selected Works</p>
-        <h2>Four lanes of work, built as an editorial visual system.</h2>
+        <h2>Selected outcomes across video, AI visuals, and creative systems.</h2>
       </div>
 
-      <div class="filter-bar" aria-label="Project filters" data-reveal>
+      <div class="filter-bar primary-filter" aria-label="Primary project filters" data-reveal>
         <button class="filter-button is-active" data-filter="all">All</button>
         <button class="filter-button" data-filter="video">Video</button>
         <button class="filter-button" data-filter="image">AI Image</button>
         <button class="filter-button" data-filter="ai-video">AI Video</button>
         <button class="filter-button" data-filter="design">Design</button>
+        <button class="filter-button" data-filter="systems">Systems</button>
+      </div>
+
+      <div class="filter-bar video-subfilter" aria-label="Video subcategory filters" data-reveal aria-hidden="true">
+        <button class="filter-button is-active" data-video-filter="all-video">All Video</button>
+        <button class="filter-button" data-video-filter="corporate-brand">Corporate & Brand</button>
+        <button class="filter-button" data-video-filter="event-recap">Event & Recap</button>
+        <button class="filter-button" data-video-filter="interview-profile">Interview & Profile</button>
+        <button class="filter-button" data-video-filter="product-promo">Product & Promo</button>
+        <button class="filter-button" data-video-filter="narrative">Narrative</button>
+        <button class="filter-button" data-video-filter="motion-compositing">Motion & Compositing</button>
+        <button class="filter-button" data-video-filter="social-reels">Social & Reels</button>
       </div>
 
       <div class="work-grid editorial-grid">
-        <article class="work-card feature" data-category="video" data-reveal>
-          <button class="card-button" data-project="reel" aria-label="Open Video Editing System project">
+        <article class="work-card feature" data-category="video" data-video-subcategory="corporate-brand" data-reveal>
+          <button class="card-button" data-project="corporate" aria-label="Open Corporate and Brand project">
             <span class="thumb thumb-video"></span>
-            <span class="card-meta">Video Editing</span>
-            <strong>Rhythm-led reel system</strong>
-            <span>Editing language, pacing, hooks, and narrative compression for short-form motion.</span>
+            <span class="card-meta">Video</span>
+            <strong>Corporate brand story</strong>
+            <span class="work-tags"><em>Corporate & Brand</em><em>Interview-led</em><em>16:9 / 9:16</em></span>
+            <span class="work-summary">A polished brand film framework for trust, clarity, executive messaging, and social cutdowns.</span>
           </button>
         </article>
-        <article class="work-card" data-category="image" data-reveal>
-          <button class="card-button" data-project="image" aria-label="Open AI Image Direction project">
+
+        <article class="work-card" data-category="video" data-video-subcategory="event-recap" data-reveal>
+          <button class="card-button" data-project="event" aria-label="Open Event and Recap project">
+            <span class="thumb thumb-video"></span>
+            <span class="card-meta">Video</span>
+            <strong>Event highlight film</strong>
+            <span class="work-tags"><em>Event & Recap</em><em>Multi-camera</em><em>16:9</em></span>
+            <span class="work-summary">A fast-paced recap system built from speaker moments, crowd energy, brand atmosphere, and rhythm editing.</span>
+          </button>
+        </article>
+
+        <article class="work-card" data-category="video" data-video-subcategory="interview-profile" data-reveal>
+          <button class="card-button" data-project="interview" aria-label="Open Interview and Profile project">
+            <span class="thumb thumb-video"></span>
+            <span class="card-meta">Video</span>
+            <strong>Interview profile piece</strong>
+            <span class="work-tags"><em>Interview & Profile</em><em>Story structure</em><em>16:9 / 1:1</em></span>
+            <span class="work-summary">A narrative-led interview edit focused on human tone, clean structure, and emotional continuity.</span>
+          </button>
+        </article>
+
+        <article class="work-card" data-category="video" data-video-subcategory="narrative" data-reveal>
+          <button class="card-button" data-project="microfilm" aria-label="Open Narrative Micro Film project">
+            <span class="thumb thumb-video"></span>
+            <span class="card-meta">Video</span>
+            <strong>Micro film sequence</strong>
+            <span class="work-tags"><em>Narrative</em><em>Micro Film</em><em>16:9</em></span>
+            <span class="work-summary">A cinematic short-form story built around atmosphere, visual continuity, and emotional pacing.</span>
+          </button>
+        </article>
+
+        <article class="work-card" data-category="image ai-video" data-reveal>
+          <button class="card-button" data-project="ai-visual" aria-label="Open AI Visual Experiments project">
             <span class="thumb thumb-image"></span>
-            <span class="card-meta">AI Image</span>
-            <strong>Cinematic character frames</strong>
-            <span>Source-anchored image generation and visual direction for high-impact concepts.</span>
+            <span class="card-meta">AI Image / AI Video</span>
+            <strong>AI visual experiment</strong>
+            <span class="work-tags"><em>AI Image</em><em>AI Video</em><em>Concept frames</em></span>
+            <span class="work-summary">A visual experiment combining image generation, motion tests, cinematic framing, and prompt direction.</span>
           </button>
         </article>
-        <article class="work-card" data-category="ai-video" data-reveal>
-          <button class="card-button" data-project="aivideo" aria-label="Open AI Video Experiments project">
-            <span class="thumb thumb-aivideo"></span>
-            <span class="card-meta">AI Video</span>
-            <strong>Motion experiments</strong>
-            <span>AI-assisted shots, continuity tests, camera language, and cinematic transitions.</span>
-          </button>
-        </article>
-        <article class="work-card" data-category="design" data-reveal>
-          <button class="card-button" data-project="design" aria-label="Open Design Systems project">
+
+        <article class="work-card" data-category="design systems" data-reveal>
+          <button class="card-button" data-project="portfolio-system" aria-label="Open Design Systems project">
             <span class="thumb thumb-design"></span>
-            <span class="card-meta">Design</span>
-            <strong>Interactive portfolio systems</strong>
-            <span>Web direction, layout systems, visual hierarchy, and media-first storytelling.</span>
+            <span class="card-meta">Design / Systems</span>
+            <strong>Interactive portfolio system</strong>
+            <span class="work-tags"><em>Design</em><em>Web</em><em>Creative System</em></span>
+            <span class="work-summary">A media-first portfolio framework for presenting motion work, AI visuals, and repeatable creative methods.</span>
           </button>
         </article>
       </div>
