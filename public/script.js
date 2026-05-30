@@ -34,6 +34,36 @@ const projectData = {
     title: "Interactive portfolio system",
     body: "A placeholder case study for design and creative systems. Use this slot for web direction, portfolio IA, visual hierarchy, repeatable workflows, and prompt or production systems.",
     tags: ["Design", "Web", "Creative System", "Portfolio"]
+  },
+  "category-video": {
+    label: "Explore Category / Video",
+    title: "Video — 30 public works",
+    body: "The full video lane will hold corporate and brand films, event recaps, interview profiles, product and promo edits, narrative micro films, motion and compositing work, and social or reels formats. Homepage shows selected outcomes first; the full archive can be expanded later.",
+    tags: ["30 Public Works", "Corporate & Brand", "Event & Recap", "Social & Reels"]
+  },
+  "category-ai-image": {
+    label: "Explore Category / AI Image",
+    title: "AI Image — visual concepts",
+    body: "A category for AI image direction, cinematic stills, character frames, visual concept development, and source-aware image generation systems.",
+    tags: ["AI Image", "Concept Frames", "Character", "Visual Direction"]
+  },
+  "category-ai-video": {
+    label: "Explore Category / AI Video",
+    title: "AI Video — motion experiments",
+    body: "A category for generated motion tests, AI video experiments, shot continuity, camera movement studies, and cinematic visual transitions.",
+    tags: ["AI Video", "Motion Tests", "Continuity", "Generated Shots"]
+  },
+  "category-design": {
+    label: "Explore Category / Design",
+    title: "Design — visual systems",
+    body: "A category for web design, layout direction, interface rhythm, visual hierarchy, and media-first presentation systems.",
+    tags: ["Design", "Web", "Layout", "Visual Direction"]
+  },
+  "category-systems": {
+    label: "Explore Category / Systems",
+    title: "Systems — creative workflows",
+    body: "A category for prompt systems, production templates, reusable creative workflows, design logic, and structured visual production methods.",
+    tags: ["Systems", "Prompt Architecture", "Workflow", "Templates"]
   }
 };
 
@@ -58,62 +88,6 @@ const updateParallax = () => {
 };
 window.addEventListener('scroll', updateParallax, { passive: true });
 updateParallax();
-
-const filterButtons = document.querySelectorAll('[data-filter]');
-const videoFilterButtons = document.querySelectorAll('[data-video-filter]');
-const videoSubfilter = document.querySelector('.video-subfilter');
-const cards = document.querySelectorAll('.work-card');
-
-let activePrimaryFilter = 'all';
-let activeVideoFilter = 'all-video';
-
-const cardHasCategory = (card, category) => {
-  const categories = (card.dataset.category || '').split(' ');
-  return categories.includes(category);
-};
-
-const updateWorkFilters = () => {
-  const showVideoSubfilter = activePrimaryFilter === 'video';
-  if (videoSubfilter) {
-    videoSubfilter.classList.toggle('is-visible', showVideoSubfilter);
-    videoSubfilter.setAttribute('aria-hidden', showVideoSubfilter ? 'false' : 'true');
-  }
-
-  cards.forEach((card) => {
-    let show = activePrimaryFilter === 'all' || cardHasCategory(card, activePrimaryFilter);
-
-    if (activePrimaryFilter === 'video' && activeVideoFilter !== 'all-video') {
-      show = show && card.dataset.videoSubcategory === activeVideoFilter;
-    }
-
-    card.classList.toggle('is-hidden', !show);
-  });
-};
-
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    activePrimaryFilter = button.dataset.filter;
-    filterButtons.forEach((btn) => btn.classList.remove('is-active'));
-    button.classList.add('is-active');
-
-    if (activePrimaryFilter !== 'video') {
-      activeVideoFilter = 'all-video';
-      videoFilterButtons.forEach((btn) => btn.classList.toggle('is-active', btn.dataset.videoFilter === 'all-video'));
-    }
-
-    updateWorkFilters();
-  });
-});
-
-videoFilterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    activeVideoFilter = button.dataset.videoFilter;
-    videoFilterButtons.forEach((btn) => btn.classList.remove('is-active'));
-    button.classList.add('is-active');
-    updateWorkFilters();
-  });
-});
-updateWorkFilters();
 
 const modal = document.querySelector('.project-modal');
 const modalLabel = document.querySelector('#modal-label');
