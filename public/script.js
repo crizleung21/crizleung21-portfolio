@@ -20,43 +20,65 @@ const updateParallax = () => {
 window.addEventListener('scroll', updateParallax, { passive: true });
 updateParallax();
 
-const aboutTabs = document.querySelectorAll('[data-about-tab]');
-const aboutPanels = document.querySelectorAll('[data-about-panel]');
+const narrativeText = document.querySelector('.about-narrative-text');
+const triggers = document.querySelectorAll('.reveal-trigger');
+const panes = document.querySelectorAll('.about-detail-pane');
 
-aboutTabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.aboutTab;
-    aboutTabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle('is-active', isActive);
-      item.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-    aboutPanels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel.dataset.aboutPanel === target);
-    });
+let hoverTimeout = null;
+
+const activatePane = (targetPaneId) => {
+  panes.forEach((pane) => {
+    const isTarget = pane.dataset.pane === targetPaneId;
+    pane.classList.toggle('is-active', isTarget);
+  });
+};
+
+triggers.forEach((trigger) => {
+  const target = trigger.dataset.target;
+  
+  // Desktop hover behaviors
+  trigger.addEventListener('mouseenter', () => {
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    
+    // Visual focus triggers
+    narrativeText.classList.add('has-hover');
+    triggers.forEach((t) => t.classList.toggle('is-active-trigger', t === trigger));
+    
+    activatePane(target);
+  });
+  
+  // Mobile tap support
+  trigger.addEventListener('click', (e) => {
+    const isAlreadyActive = trigger.classList.contains('is-active-trigger');
+    
+    if (isAlreadyActive) {
+      // Toggle off back to default pane
+      resetToDefault();
+    } else {
+      if (hoverTimeout) clearTimeout(hoverTimeout);
+      narrativeText.classList.add('has-hover');
+      triggers.forEach((t) => t.classList.toggle('is-active-trigger', t === trigger));
+      activatePane(target);
+    }
+    e.stopPropagation();
   });
 });
 
-const skillViewButtons = document.querySelectorAll('[data-skill-view]');
-const skillPanels = document.querySelectorAll('[data-skill-panel]');
+const resetToDefault = () => {
+  if (narrativeText) narrativeText.classList.remove('has-hover');
+  triggers.forEach((t) => t.classList.remove('is-active-trigger'));
+  activatePane('default');
+};
 
-skillViewButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const target = button.dataset.skillView;
-    skillViewButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle('is-active', isActive);
-      item.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-    skillPanels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel.dataset.skillPanel === target);
-    });
+// Return to default placeholder panel when cursor leaves the columns
+const aboutContainer = document.querySelector('.about-interactive-container');
+if (aboutContainer) {
+  aboutContainer.addEventListener('mouseleave', () => {
+    hoverTimeout = setTimeout(resetToDefault, 200);
   });
-});
+}
 
-const skillGroupCards = document.querySelectorAll('[data-skill-group]');
-skillGroupCards.forEach((card) => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('is-open');
-  });
+// Close details overlay on tapping anywhere else on mobile
+document.addEventListener('click', () => {
+  resetToDefault();
 });
