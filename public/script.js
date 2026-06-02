@@ -60,3 +60,50 @@ skillToggleItems.forEach((item) => {
     item.classList.toggle('is-open');
   });
 });
+
+// Video archive filters and modal
+const videoFilters = document.querySelectorAll('[data-video-filter]');
+const videoCards = document.querySelectorAll('[data-video-card]');
+videoFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    const target = filter.dataset.videoFilter;
+    videoFilters.forEach((item) => item.classList.toggle('is-active', item === filter));
+    videoCards.forEach((card) => {
+      const matches = target === 'all' || card.dataset.category === target;
+      card.classList.toggle('is-hidden', !matches);
+    });
+  });
+});
+
+const videoModal = document.querySelector('[data-video-modal]');
+const videoFrame = document.querySelector('[data-video-frame]');
+const videoModalTitle = document.querySelector('[data-video-modal-title]');
+const videoOpenButtons = document.querySelectorAll('[data-video-open]');
+const videoCloseButtons = document.querySelectorAll('[data-video-close]');
+
+const closeVideoModal = () => {
+  if (!videoModal || !videoFrame) return;
+  videoModal.classList.remove('is-open');
+  videoModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  videoFrame.innerHTML = '';
+  if (videoModalTitle) videoModalTitle.textContent = '';
+};
+
+videoOpenButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!videoModal || !videoFrame) return;
+    const videoId = button.dataset.videoId;
+    const title = button.dataset.videoTitle || 'Video';
+    videoFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    if (videoModalTitle) videoModalTitle.textContent = title;
+    videoModal.classList.add('is-open');
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  });
+});
+
+videoCloseButtons.forEach((button) => button.addEventListener('click', closeVideoModal));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeVideoModal();
+});
