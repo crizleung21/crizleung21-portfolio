@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Criz Leung — video works across brand films, events, interviews, product promos, narrative shorts, motion graphics, and social formats." />
+  <meta name="description" content="Criz Leung — selected video works across interviews, micro films, promotion videos, and motion graphics." />
   <title>Video Works — Criz Leung</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="video.css" />
 </head>
-<body class="category-page">
+<body class="video-page">
   <header class="site-header runway-header" data-reveal>
     <a class="brand" href="index.html" aria-label="Criz Leung home">Criz Leung</a>
     <nav class="nav" aria-label="Primary navigation">
@@ -15,32 +16,108 @@
       <a href="index.html#about">About</a>
       <a href="showreel.html">Showreel</a>
     </nav>
-    <a class="nav-cta" href="mailto:crizleung21@gmail.com">Let's Collaborate</a>
+    <a class="nav-cta" href="mailto:crizleung21@gmail.com">Let’s Collaborate</a>
   </header>
 
   <main>
-    <section class="category-hero dark-section">
-      <div class="category-page-copy" data-reveal>
-        <p class="label">Video</p>
-        <h1>30 public works across video formats.</h1>
-        <p class="category-page-lede">This page will become the full video archive. It will organize corporate and brand films, event recaps, interview profiles, product promos, narrative micro films, motion and compositing work, and social reels.</p>
+    <section class="video-archive-hero" data-reveal>
+      <p class="label">Video Works</p>
+      <div class="video-hero-grid">
+        <h1>Selected moving-image projects.</h1>
+        <p>Interview films, micro films, promotional edits, and motion graphics work. Each piece opens through a lightweight YouTube modal, keeping the archive fast and clean.</p>
       </div>
-      <div class="category-page-grid">
-        <article class="archive-card" data-reveal><span>01</span><h3>Corporate & Brand</h3><p>Company profiles, brand stories, interview-led films, and executive communication.</p></article>
-        <article class="archive-card" data-reveal><span>02</span><h3>Event & Recap</h3><p>Conferences, launches, exhibitions, highlights, and multi-camera event energy.</p></article>
-        <article class="archive-card" data-reveal><span>03</span><h3>Interview & Profile</h3><p>Testimonials, human stories, dialogue structure, and profile edits.</p></article>
-        <article class="archive-card" data-reveal><span>04</span><h3>Product & Promo</h3><p>Launch videos, product demos, campaign edits, and promotional content.</p></article>
-        <article class="archive-card" data-reveal><span>05</span><h3>Narrative</h3><p>Micro films, cinematic shorts, emotional pacing, and story-led sequences.</p></article>
-        <article class="archive-card" data-reveal><span>06</span><h3>Motion & Compositing</h3><p>Motion graphics, green screen, keying, and visual post-production.</p></article>
-        <article class="archive-card" data-reveal><span>07</span><h3>Social & Reels</h3><p>Vertical cuts, short-form pacing, hooks, and platform-specific edits.</p></article>
+    </section>
+
+    <section class="video-archive-section" aria-label="Video archive">
+      <div class="video-filter-bar" data-reveal>
+        <button class="video-filter is-active" type="button" data-video-filter="all">All <span>4</span></button>
+        <button class="video-filter" type="button" data-video-filter="Interview Video">Interview <span>1</span></button>
+        <button class="video-filter" type="button" data-video-filter="Micro Film">Micro Film <span>1</span></button>
+        <button class="video-filter" type="button" data-video-filter="Promotion Video">Promotion <span>1</span></button>
+        <button class="video-filter" type="button" data-video-filter="Motion Graphics">Motion Graphics <span>1</span></button>
       </div>
-      <div class="category-return" data-reveal>
-        <a class="button light-button" href="index.html#works">Back to Directions</a>
+
+      <div class="video-work-grid" data-video-grid>
+        <article class="video-work-card" data-reveal data-video-card data-category="Interview Video">
+          <button class="video-thumb-button" type="button" data-video-open data-video-id="n6Z3xuvFGAw" data-video-title="真體字 - 歐陽昌">
+            <img src="https://img.youtube.com/vi/n6Z3xuvFGAw/hqdefault.jpg" alt="真體字 - 歐陽昌 thumbnail" loading="lazy" />
+            <span class="video-play-mark">Play</span>
+          </button>
+          <div class="video-card-meta">
+            <span>Interview Video</span>
+            <h2>真體字 - 歐陽昌</h2>
+            <p>港覺</p>
+            <div class="video-tag-row">
+              <small>Video Editing</small>
+              <small>Color Grading</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-work-card" data-reveal data-video-card data-category="Micro Film">
+          <button class="video-thumb-button" type="button" data-video-open data-video-id="_TOEgnrCV_o" data-video-title="有貨 - 擔心篇">
+            <img src="https://img.youtube.com/vi/_TOEgnrCV_o/hqdefault.jpg" alt="有貨 - 擔心篇 thumbnail" loading="lazy" />
+            <span class="video-play-mark">Play</span>
+          </button>
+          <div class="video-card-meta">
+            <span>Micro Film</span>
+            <h2>有貨 - 擔心篇</h2>
+            <p>GEeShop</p>
+            <div class="video-tag-row">
+              <small>Video Editing</small>
+              <small>Color Grading</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-work-card" data-reveal data-video-card data-category="Promotion Video">
+          <button class="video-thumb-button" type="button" data-video-open data-video-id="v8hw1F5kDCs" data-video-title="Downtown">
+            <img src="https://img.youtube.com/vi/v8hw1F5kDCs/hqdefault.jpg" alt="Downtown thumbnail" loading="lazy" />
+            <span class="video-play-mark">Play</span>
+          </button>
+          <div class="video-card-meta">
+            <span>Promotion Video</span>
+            <h2>Downtown</h2>
+            <p>Downtown</p>
+            <div class="video-tag-row">
+              <small>Video Editing</small>
+              <small>Color Grading</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-work-card" data-reveal data-video-card data-category="Motion Graphics">
+          <button class="video-thumb-button" type="button" data-video-open data-video-id="BMbxm5ZeVdk" data-video-title="OGIS">
+            <img src="https://img.youtube.com/vi/BMbxm5ZeVdk/hqdefault.jpg" alt="OGIS thumbnail" loading="lazy" />
+            <span class="video-play-mark">Play</span>
+          </button>
+          <div class="video-card-meta">
+            <span>Motion Graphics</span>
+            <h2>OGIS</h2>
+            <p>中電 CLP</p>
+            <div class="video-tag-row">
+              <small>Motion Graphics</small>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="video-return" data-reveal>
+        <a class="button ghost-button" href="index.html#works">Back to Work</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><p>© 2026 Criz Leung. Hybrid Creative Systems.</p></footer>
+  <div class="video-modal" data-video-modal aria-hidden="true">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video player">
+      <button class="video-modal-close" type="button" data-video-close>Close</button>
+      <div class="video-modal-frame" data-video-frame></div>
+      <p class="video-modal-title" data-video-modal-title></p>
+    </div>
+  </div>
+
+  <footer class="site-footer"><p>© 2026 Criz Leung. Web Portfolio.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
