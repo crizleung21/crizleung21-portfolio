@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract poster for OGIS</title>
+  <desc id="desc">Monochrome orbital rings, signal dots, and segmented motion lines.</desc>
+  <rect width="1600" height="1000" fill="#f2f2ed"/>
+  <circle cx="800" cy="500" r="330" fill="#090909"/>
+  <circle cx="800" cy="500" r="236" fill="none" stroke="#f2f2ed" stroke-width="20" stroke-dasharray="44 28"/>
+  <ellipse cx="800" cy="500" rx="470" ry="176" fill="none" stroke="#8d8d89" stroke-width="16" transform="rotate(-18 800 500)"/>
+  <ellipse cx="800" cy="500" rx="470" ry="176" fill="none" stroke="#090909" stroke-width="8" transform="rotate(42 800 500)"/>
+  <circle cx="800" cy="500" r="76" fill="#f2f2ed"/>
+  <g fill="#090909">
+    <circle cx="322" cy="380" r="24"/><circle cx="1218" cy="662" r="24"/><circle cx="1160" cy="256" r="16"/>
+  </g>
+  <path d="M110 110h250M110 154h166M1240 846h250M1324 890h166" stroke="#090909" stroke-width="14"/>
+</svg>

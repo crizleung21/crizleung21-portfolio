@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract poster for 真體字 — 歐陽昌</title>
+  <desc id="desc">Monochrome circular forms and parallel lines suggesting an interview exchange.</desc>
+  <rect width="1600" height="1000" fill="#090909"/>
+  <path d="M0 128h1600M0 872h1600" stroke="#f2f2ed" stroke-width="2" opacity=".24"/>
+  <path d="M800 0v1000" stroke="#f2f2ed" stroke-width="2" opacity=".18"/>
+  <circle cx="510" cy="500" r="210" fill="none" stroke="#f2f2ed" stroke-width="22"/>
+  <circle cx="1090" cy="500" r="210" fill="#f2f2ed"/>
+  <circle cx="1090" cy="500" r="82" fill="#090909"/>
+  <path d="M720 432c68-54 92-54 160 0M720 500c68-54 92-54 160 0M720 568c68-54 92-54 160 0" fill="none" stroke="#8d8d89" stroke-width="14" stroke-linecap="round"/>
+  <g fill="#f2f2ed">
+    <circle cx="120" cy="128" r="8"/><circle cx="1480" cy="872" r="8"/>
+  </g>
+</svg>

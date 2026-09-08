@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract editing timeline</title>
+  <desc id="desc">A vertical monochrome cinematic composition of frames, tracks, and a central light signal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050607"/>
+      <stop offset="0.5" stop-color="#15181c"/>
+      <stop offset="1" stop-color="#020303"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="42%">
+      <stop offset="0" stop-color="#f4f2ec" stop-opacity="0.38"/>
+      <stop offset="0.3" stop-color="#d8d9dc" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#fff" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect width="900" height="1200" fill="url(#grid)"/>
+  <rect width="900" height="1200" fill="url(#glow)"/>
+  <g fill="none" stroke="#f4f2ec" stroke-opacity="0.28">
+    <rect x="84" y="96" width="732" height="604" rx="4"/>
+    <path d="M84 780H816M84 852H816M84 924H816M84 996H816"/>
+  </g>
+  <g transform="translate(450 392)">
+    <circle r="88" fill="none" stroke="#f4f2ec" stroke-width="1.5" opacity="0.78"/>
+    <circle r="10" fill="#f4f2ec"/>
+    <path d="M-196 0H-112M112 0H196M0-196V-112M0 112V196" stroke="#f4f2ec" stroke-opacity="0.5"/>
+  </g>
+  <path d="M450 64V1090" stroke="#f4f2ec" stroke-width="2" stroke-opacity="0.7"/>
+  <g fill="#f4f2ec">
+    <rect x="112" y="808" width="254" height="16" opacity="0.55"/>
+    <rect x="380" y="808" width="366" height="16" opacity="0.18"/>
+    <rect x="160" y="880" width="464" height="16" opacity="0.24"/>
+    <rect x="638" y="880" width="120" height="16" opacity="0.58"/>
+    <rect x="112" y="952" width="180" height="16" opacity="0.32"/>
+    <rect x="306" y="952" width="448" height="16" opacity="0.18"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract poster for Downtown</title>
+  <desc id="desc">A monochrome stepped grid of architectural blocks with a diagonal light path.</desc>
+  <rect width="1600" height="1000" fill="#090909"/>
+  <g fill="#f2f2ed">
+    <rect x="112" y="620" width="180" height="268"/>
+    <rect x="332" y="494" width="180" height="394"/>
+    <rect x="552" y="348" width="180" height="540"/>
+    <rect x="772" y="218" width="180" height="670"/>
+    <rect x="992" y="414" width="180" height="474"/>
+    <rect x="1212" y="554" width="180" height="334"/>
+  </g>
+  <g fill="#090909">
+    <rect x="148" y="674" width="44" height="44"/><rect x="218" y="674" width="44" height="44"/>
+    <rect x="368" y="548" width="44" height="44"/><rect x="438" y="548" width="44" height="44"/>
+    <rect x="588" y="402" width="44" height="44"/><rect x="658" y="402" width="44" height="44"/>
+    <rect x="808" y="272" width="44" height="44"/><rect x="878" y="272" width="44" height="44"/>
+    <rect x="1028" y="468" width="44" height="44"/><rect x="1098" y="468" width="44" height="44"/>
+    <rect x="1248" y="608" width="44" height="44"/><rect x="1318" y="608" width="44" height="44"/>
+  </g>
+  <path d="M64 812 1536 188" stroke="#8d8d89" stroke-width="18" opacity=".8"/>
+  <path d="M64 888h1472" stroke="#f2f2ed" stroke-width="4"/>
+</svg>
